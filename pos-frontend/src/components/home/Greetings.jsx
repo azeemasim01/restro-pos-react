@@ -34,7 +34,7 @@ const Greetings = () => {
           <p className="text-white">{formatDate(dateTime)}</p>
         </div>
       </div>
-        <div className="flex items-center space-between gap-3">
+        <div className="flex items-center space-between gap-3 mt-5">
             <MiniCard title="Total Earnings" icon={<BsCashCoin />} number={512} footerNum={1.6} />
             <MiniCard title="In Progress" icon={<GrInProgress />} number={16} footerNum={3.6} />            
           </div>

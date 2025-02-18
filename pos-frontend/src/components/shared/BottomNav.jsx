@@ -6,7 +6,7 @@ import { MdOutlineReorder, MdTableBar } from 'react-icons/md'
 
 const BottomNav = () => {
   return (
-      <div className='fixed bottom-0 w-full bg-[#262626] text-[#f1f1f1] flex justify-around p-3'>
+      <div className='fixed bottom-0 w-full bg-[#1a1a1a] text-[#f1f1f1] flex justify-around p-3'>
           <button><FaHome className='inline mr-2' size={20} />Home</button>
           <button><MdOutlineReorder className='inline mr-2' size={20} /> Orders</button>
           <button><MdTableBar className='inline mr-2' size={20} /> Tables</button>

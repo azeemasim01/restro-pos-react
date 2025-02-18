@@ -1,5 +1,6 @@
 import React from 'react'
 import Greetings from '../components/home/Greetings'
+import PopularDishes from '../components/home/PopularDishes'
 
 const Home = () => {
   return (    
@@ -10,7 +11,7 @@ const Home = () => {
       </div>
       {/* right div */}
       <div className="flex-[2] bg-[#333]">
-        
+        <PopularDishes />
       </div>
     </section>
   )
