@@ -2,17 +2,16 @@ import React from 'react'
 import Greetings from '../components/home/Greetings'
 
 const Home = () => {
-  return (
-    <section className='bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex gap-3'>
+  return (    
+    <section className='bg-[#1f1f1f] h-screen flex gap-3'>
       {/* left div */}
-      <div className='flex flex-[3] border-1 border-black p-3'>
+      <div className='flex-[3] bg-[#333] p-5 '>
         <Greetings />
       </div>
       {/* right div */}
-      <div className='flex flex-[2] border-1 border-black p-3'>
-        <h1>Right div</h1>
+      <div className="flex-[2] bg-[#00ff00]">
+        
       </div>
-
     </section>
   )
 }

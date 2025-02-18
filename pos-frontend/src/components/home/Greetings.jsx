@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import MiniCard from "./MiniCard";
+import { BsCashCoin } from "react-icons/bs";
+import { GrInProgress } from "react-icons/gr";
+import RecentOrders from "./RecentOrders";
 
 const Greetings = () => {
-
   const [dateTime, setDateTime] = useState(new Date());
   useEffect(() => {
     const interval = setInterval(() => {
@@ -10,32 +13,35 @@ const Greetings = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // format date and time "January 1, 2022 12:00:00"
-  const date = dateTime.toLocaleDateString("en-US", {
-    // weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-  const time = dateTime.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-
-
+  const formatDate = (date) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return date.toLocaleDateString(undefined, options);
+  };
 
   return (
-    <div className="flex justify-between w-full">
-      <div>
-        <h1 className="text-2xl">Good Morning, Admin</h1>
-        <p className="text-xs">Give your best services to customers 🍕</p>
+    <>
+      <div className="flex justify-between items-center">
+        <div className=" ">
+          <h1 className="text-4xl text-[#f5f5f5]">Good Morning, Amrit!</h1>
+          <p className="text-[#ababab]">
+            Give your best services to the customers 🥰
+          </p>
+        </div>
+        <div>
+          <h1 className="text-4xl text-white">
+            {dateTime.toLocaleTimeString()}
+          </h1>
+          <p className="text-white">{formatDate(dateTime)}</p>
+        </div>
       </div>
-      <div>
-        <h1 className="text-2xl">{time}</h1>
-        <p className="text-xs">{date}</p>
-      </div>
-    </div>
+        <div className="flex items-center space-between gap-3">
+            <MiniCard title="Total Earnings" icon={<BsCashCoin />} number={512} footerNum={1.6} />
+            <MiniCard title="In Progress" icon={<GrInProgress />} number={16} footerNum={3.6} />            
+          </div>
+          <div className="mt-3">
+              <RecentOrders />
+          </div>
+    </>
   );
 };
 
