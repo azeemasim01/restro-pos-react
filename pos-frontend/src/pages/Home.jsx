@@ -9,7 +9,7 @@ const Home = () => {
         <Greetings />
       </div>
       {/* right div */}
-      <div className="flex-[2] bg-[#00ff00]">
+      <div className="flex-[2] bg-[#333]">
         
       </div>
     </section>
