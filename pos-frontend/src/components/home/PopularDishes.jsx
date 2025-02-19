@@ -20,7 +20,7 @@ const PopularDishes = () => {
             className="bg-[#1F1F1F] rounded-md text-[#f5f5f5] p-2 outline-none w-full"
           />
         </div> */}
-        <div className="mt-3 overflow-y-scroll no-scrollbar h-[75vh] p-3">
+        <div className="mt-3 overflow-y-scroll no-scrollbar h-[75vh] p-3 xl:grid xl:grid-cols-2 xl:gap-3">
           {popularDishes.map((dish) => (
             <div
               key={dish.id}
