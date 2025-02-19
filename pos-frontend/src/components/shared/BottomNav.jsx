@@ -17,7 +17,7 @@ const BottomNav = () => {
       <button onClick={() => navigate("/orders")}>
         <MdOutlineReorder className="inline mr-2" size={20} /> Orders
       </button>
-      <button onClick={() => navigate("/")}>
+      <button onClick={() => navigate("/tables")}>
         <MdTableBar className="inline mr-2" size={20} /> Tables
       </button>
       <button onClick={() => navigate("/")}>
