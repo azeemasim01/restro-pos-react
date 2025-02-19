@@ -15,7 +15,7 @@ const Tables = () => {
       <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-3'>
         {
           tables.map((table) => (
-            <TableCard key={table.id} name={table.name} initial={table.initial} status={table.status} seats={table.seats} /> 
+            <TableCard key={table.id}  id={table.id} name={table.name} initial={table.initial} status={table.status} seats={table.seats} /> 
           ))
         }
         
